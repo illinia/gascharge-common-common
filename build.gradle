@@ -19,7 +19,12 @@ dependencyManagement {
 }
 
 dependencies {
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
     api "org.springframework.boot:spring-boot-starter-web:2.7.3"
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
 }
 
 publishing {
